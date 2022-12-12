@@ -7,6 +7,8 @@ import * as dotenv from "dotenv";
 const app = express();
 app.use(express.json())
 
+const PORT = process.env.PGPORT;
+
 app.use(cors());
 
 try {
@@ -18,6 +20,6 @@ try {
 
 
 app.use(Router);
-app.listen(process.env.PGPORT, () => {
-console.log('welcome to cursimple, it is the magic oF WORKSHOPS')
+app.listen(PORT, () => {
+console.log('welcome to cursimple')
 })
