@@ -1,16 +1,15 @@
 import  { Sequelize } from "sequelize";
-import * as dotenv from "dotenv"
+import * as dotenv from "dotenv";
 dotenv.config();
 
 const db = new Sequelize (
-process.env.DATABASE_URL,
 process.env.PGDATABASE,
-process.env.PGHOST,
+process.env.PGUSER,
 process.env.PGPASSWORD, {
-  host: process.env.PGPORT,
+  host: process.env.PGHOST,
   dialect: 'postgres',
   logging: false,
-  port: process.env.PGUSER,
+  port: process.env.PGPORT,
   define: {
     timestamps: false,
     },
