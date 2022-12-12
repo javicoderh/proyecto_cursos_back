@@ -17,6 +17,6 @@ try {
 
 
 app.use(Router);
-app.listen(process.env.PGPORT, () => {
+app.listen(process.env.PORT, () => {
 console.log('this seems like logic but it is magic on port:5000')
 })
