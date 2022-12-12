@@ -18,6 +18,6 @@ try {
 
 
 app.use(Router);
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PGPORT, () => {
 console.log('welcome to cursimple, it is the magic oF WORKSHOPS')
 })
